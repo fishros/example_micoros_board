@@ -47,23 +47,23 @@ void loop()
   if (millis() - timer > 500)
   { // print data every second
     Serial.printf("%f,%f,%f\n", (float)millis() / 1000.0, mpu.getTemp(), mpu.getAngleZ());
-    // Serial.print(F("TIME: "));Serial.println(millis());
-    // Serial.print(F("TEMPERATURE: "));Serial.println(mpu.getTemp());
-    // Serial.print(F("ACCELERO  X: "));Serial.print(mpu.getAccX());
-    // Serial.print("\tY: ");Serial.print(mpu.getAccY());
-    // Serial.print("\tZ: ");Serial.println(mpu.getAccZ());
+    Serial.print(F("TIME: "));Serial.println(millis());
+    Serial.print(F("TEMPERATURE: "));Serial.println(mpu.getTemp());
+    Serial.print(F("ACCELERO  X: "));Serial.print(mpu.getAccX());
+    Serial.print("\tY: ");Serial.print(mpu.getAccY());
+    Serial.print("\tZ: ");Serial.println(mpu.getAccZ());
 
-    // Serial.print(F("GYRO      X: "));Serial.print(mpu.getGyroX());
-    // Serial.print("\tY: ");Serial.print(mpu.getGyroY());
-    // Serial.print("\tZ: ");Serial.println(mpu.getGyroZ());
+    Serial.print(F("GYRO      X: "));Serial.print(mpu.getGyroX());
+    Serial.print("\tY: ");Serial.print(mpu.getGyroY());
+    Serial.print("\tZ: ");Serial.println(mpu.getGyroZ());
 
-    // Serial.print(F("ACC ANGLE X: "));Serial.print(mpu.getAccAngleX());
-    // Serial.print("\tY: ");Serial.println(mpu.getAccAngleY());
+    Serial.print(F("ACC ANGLE X: "));Serial.print(mpu.getAccAngleX());
+    Serial.print("\tY: ");Serial.println(mpu.getAccAngleY());
 
-    // Serial.print(F("ANGLE     X: "));Serial.print(mpu.getAngleX());
-    // Serial.print("\tY: ");Serial.print(mpu.getAngleY());
-    // Serial.print("\tZ: ");Serial.println(mpu.getAngleZ());
-    // Serial.println(F("=====================================================\n"));
+    Serial.print(F("ANGLE     X: "));Serial.print(mpu.getAngleX());
+    Serial.print("\tY: ");Serial.print(mpu.getAngleY());
+    Serial.print("\tZ: ");Serial.println(mpu.getAngleZ());
+    Serial.println(F("=====================================================\n"));
     timer = millis();
   }
 }

@@ -41,7 +41,7 @@ void setup()
   rclc_support_init(&support, 0, NULL, &allocator);
   // 创建节点 topic_sub_test
   rclc_node_init_default(&node, "topic_pub_test", "", &support);
-  // 订阅者初始化
+  // 发布者初始化
   rclc_publisher_init_default(
       &publisher,
       &node,

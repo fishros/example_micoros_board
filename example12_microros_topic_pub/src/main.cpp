@@ -12,7 +12,7 @@ rclc_support_t support;
 rcl_allocator_t allocator;
 rcl_node_t node;
 rcl_timer_t timer;
- 
+
 // 声明话题发布者
 rcl_publisher_t publisher;
 // 声明消息文件
@@ -24,7 +24,10 @@ void timer_callback(rcl_timer_t *timer, int64_t last_call_time)
   RCLC_UNUSED(last_call_time);
   if (timer != NULL)
   {
-    rcl_publish(&publisher, &pub_msg, NULL);
+    if (RCL_RET_OK != rcl_publish(&publisher, &pub_msg, NULL))
+    {
+      // 失败处理....
+    }
   }
 }
 
